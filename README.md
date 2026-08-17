@@ -1,6 +1,6 @@
 # PantheonQoL
 
-QoL mod for pantheons
+QoL mod for pantheons in Hollow Knight
 
 "[" button for fast return from a pantheon
 
