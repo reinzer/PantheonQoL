@@ -1,0 +1,507 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <LangVersion>10.0</LangVersion>
+    <TargetFramework>net4.7.2</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <HK_Path>/home/void/.steam/steam/steamapps/common/Hollow Knight</HK_Path>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <Reference Include="0Harmony20">
+      <HintPath>$(HK_Path)/BepInEx/core/0Harmony20.dll</HintPath>
+    </Reference>
+    <Reference Include="Accessibility">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Accessibility.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx">
+      <HintPath>$(HK_Path)/BepInEx/core/BepInEx.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Harmony">
+      <HintPath>$(HK_Path)/BepInEx/core/BepInEx.Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="BepInEx.Preloader">
+      <HintPath>$(HK_Path)/BepInEx/core/BepInEx.Preloader.dll</HintPath>
+    </Reference>
+    <Reference Include="Coffee.SoftMaskForUGUI">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Coffee.SoftMaskForUGUI.dll</HintPath>
+    </Reference>
+    <Reference Include="com.rlabrecque.steamworks.net">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/com.rlabrecque.steamworks.net.dll</HintPath>
+    </Reference>
+    <Reference Include="ConditionalExpression">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/ConditionalExpression.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaxyCSharp">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/GalaxyCSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="HarmonyXInterop">
+      <HintPath>$(HK_Path)/BepInEx/core/HarmonyXInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>$(HK_Path)/BepInEx/core/Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Mdb">
+      <HintPath>$(HK_Path)/BepInEx/core/Mono.Cecil.Mdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Pdb">
+      <HintPath>$(HK_Path)/BepInEx/core/Mono.Cecil.Pdb.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil.Rocks">
+      <HintPath>$(HK_Path)/BepInEx/core/Mono.Cecil.Rocks.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Posix">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Mono.Posix.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.WebBrowser">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Mono.WebBrowser.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.RuntimeDetour">
+      <HintPath>$(HK_Path)/BepInEx/core/MonoMod.RuntimeDetour.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoMod.Utils">
+      <HintPath>$(HK_Path)/BepInEx/core/MonoMod.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/mscorlib.dll</HintPath>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/netstandard.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.UnityConverters">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Newtonsoft.Json.UnityConverters.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.UnityConverters.Addressables">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Newtonsoft.Json.UnityConverters.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json.UnityConverters.Mathematics">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Newtonsoft.Json.UnityConverters.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="PlayMaker">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/PlayMaker.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DirectInput">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/SharpDX.DirectInput.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.ComponentModel.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.Install">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Configuration.Install.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Data.DataSetExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.EnterpriseServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.IO.Compression.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection.Extensions">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Reflection.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.ResourceManager">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Resources.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Handles">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Runtime.Handles.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Runtime.Serialization.Formatters.Soap.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel.Internals">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.ServiceModel.Internals.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.ServiceProcess.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Transactions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/System.Xml.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="TeamCherry.BuildBot">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/TeamCherry.BuildBot.dll</HintPath>
+    </Reference>
+    <Reference Include="TeamCherry.Cinematics">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/TeamCherry.Cinematics.dll</HintPath>
+    </Reference>
+    <Reference Include="TeamCherry.Localization">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/TeamCherry.Localization.dll</HintPath>
+    </Reference>
+    <Reference Include="TeamCherry.NestedFadeGroup">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/TeamCherry.NestedFadeGroup.dll</HintPath>
+    </Reference>
+    <Reference Include="TeamCherry.SharedUtils">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/TeamCherry.SharedUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="TeamCherry.Splines">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/TeamCherry.Splines.dll</HintPath>
+    </Reference>
+    <Reference Include="TeamCherry.TK2D">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/TeamCherry.TK2D.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Addressables">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Unity.Addressables.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Unity.Burst.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Burst.Unsafe">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Unity.Burst.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Unity.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Collections.LowLevel.ILSupport">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Unity.Collections.LowLevel.ILSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Unity.InputSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.InputSystem.ForUI">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Unity.InputSystem.ForUI.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Mathematics">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Unity.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.MemoryProfiler">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Unity.MemoryProfiler.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Profiling.Core">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Unity.Profiling.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Unity.Recorder.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder.Base">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Unity.Recorder.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ResourceManager">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Unity.ResourceManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ScriptableBuildPipeline">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Unity.ScriptableBuildPipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.TextMeshPro">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Timeline">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/Unity.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AMDModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.AMDModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AndroidJNIModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.AndroidJNIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ContentLoadModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.ContentLoadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DSPGraphModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.DSPGraphModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GIModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.GIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GraphicsStateCollectionSerializerModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.GraphicsStateCollectionSerializerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HierarchyCoreModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.HierarchyCoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HotReloadModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.HotReloadModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputForUIModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.InputForUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.InputLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.LocalizationModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.LocalizationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.MarshallingModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.MarshallingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.MultiplayerModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.MultiplayerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.NVIDIAModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.NVIDIAModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PropertiesModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.PropertiesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ShaderVariantAnalyticsModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.ShaderVariantAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StreamingModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.StreamingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubstanceModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.SubstanceModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SubsystemsModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.SubsystemsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreFontEngineModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextCoreTextEngineModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TLSModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.TLSModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UmbraModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.UmbraModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityCurlModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.UnityCurlModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityTestProtocolModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.UnityTestProtocolModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VFXModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.VFXModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VirtualTexturingModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.VirtualTexturingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.XRModule">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/UnityEngine.XRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="XblPCSandbox">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/XblPCSandbox.dll</HintPath>
+    </Reference>
+    <Reference Include="XGamingRuntime">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/XGamingRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="zlib.net">
+      <HintPath>$(HK_Path)/hollow_knight_Data/Managed/zlib.net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="Build">
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="/home/void/.steam/steam/steamapps/common/Hollow Knight/BepInEx/plugins/Test/" />
+  </Target>
+
+</Project>
