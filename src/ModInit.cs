@@ -23,6 +23,7 @@ namespace PantheonQoL
 		};
         public static PantheonQoL instance;
 		public static bool enabled = true;
+		public static bool scenePreloadEnabled = false;
 		public static bool skipTransitionAnimation = true;
 		public static bool disFastDeathForAll = false; //disable for all
 		public static bool disFastDeathForPermaThreat = true; //disable only for bosses with permanent threats on arena (like no floor)
@@ -35,6 +36,7 @@ namespace PantheonQoL
 		public static bool doSkipSpaScenes = false;
         public static string currentSceneName;
         public static Scene currentScene;
+        public static ScenePreload.SceneInfo currentSceneInfo;
         string pathToModData = BepInEx.Paths.ConfigPath + "/" +"PantheonQoL.dat";
         public static object obj;
 		public static bool ggBossSceneMutex = true;
@@ -101,6 +103,8 @@ namespace PantheonQoL
                 var bundle = LoadBundle(name);
                 assetBundles.Add(bundle);
             }
+
+			this.StartCoroutine(ScenePreload.Start());
 
             Logger.LogInfo($"Plugin is loaded!");
         }

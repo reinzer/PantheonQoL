@@ -907,7 +907,6 @@ public class PatchedFsm
 		var introRoarAntic = fsm.GetState("Intro Roar Antic");
 		var colMusic = fsm.GetState("Col Music");
 
-
 		var arrivalAnimator = BossSceneController.Instance.transform.Find("Dream Entry/Knight Dream Arrival").gameObject.GetComponent<tk2dSpriteAnimator>();
 		var warpInClip = arrivalAnimator.GetClipByName("Warp In");
 		if(PantheonQoL.origVengeflyKingsKnightWarpInFps == -2f) PantheonQoL.origVengeflyKingsKnightWarpInFps = warpInClip.fps;
