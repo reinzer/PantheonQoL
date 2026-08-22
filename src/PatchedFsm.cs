@@ -111,40 +111,50 @@ public class PatchedFsm
             new FsmPatch("Inspect", "npc_control", PatchFsm_NPCControl),
             new FsmPatch("door_dreamReturnGG", "Boss Sequence Finish", PatchFsm_DreamReturnControl),
         }),
+        new PatchedFsm("GG_Atrium", new FsmPatch[]
+        {
+            new FsmPatch("door_dreamReturnGG_GG_Challenge_Door", "Boss Sequence Finish", PatchFsm_DoorDreamReturnControl),
+            new FsmPatch("door_dreamReturnGG_GG_Challenge_Door (1)", "Boss Sequence Finish", PatchFsm_DoorDreamReturnControl),
+            new FsmPatch("door_dreamReturnGG_GG_Challenge_Door (2)", "Boss Sequence Finish", PatchFsm_DoorDreamReturnControl),
+            new FsmPatch("door_dreamReturnGG_GG_Challenge_Door (3)", "Boss Sequence Finish", PatchFsm_DoorDreamReturnControl),
+            new FsmPatch("door_dreamReturnGG_GG_Challenge_Door (4)", "Boss Sequence Finish", PatchFsm_DoorDreamReturnControl),
+            new FsmPatch("Inspect", "Challenge UI", PatchFsm_RegularDoorAnimControl),
+            new FsmPatch("Inspect", "npc_control", PatchFsm_NPCControl),
+        }),
         new PatchedFsm("GG_Spa", new FsmPatch[]
         {
             new FsmPatch("right1", "Custom Fade", PatchFsm_CustomFadeControl),
-            new FsmPatch("Dream Entry", "Control", PatchFsm_DreamEntryControl),
+            new FsmPatch("Dream Entry", "Control", PatchFsm_LoreDreamEntryControl),
             new FsmPatch("gg_battle_transitions(Clone)", "Transitions", PatchFsm_EngineTransitionsControl),
         }),
         new PatchedFsm("GG_Engine", new FsmPatch[]
         {
             new FsmPatch("right1", "Custom Fade", PatchFsm_CustomFadeControl),
-            new FsmPatch("Dream Entry", "Control", PatchFsm_DreamEntryControl),
+            new FsmPatch("Dream Entry", "Control", PatchFsm_LoreDreamEntryControl),
             new FsmPatch("gg_battle_transitions(Clone)", "Transitions", PatchFsm_EngineTransitionsControl),
         }),
         new PatchedFsm("GG_Unn", new FsmPatch[]
         {
             new FsmPatch("right1", "Custom Fade", PatchFsm_CustomFadeControl),
-            new FsmPatch("Dream Entry", "Control", PatchFsm_DreamEntryControl),
+            new FsmPatch("Dream Entry", "Control", PatchFsm_LoreDreamEntryControl),
             new FsmPatch("gg_battle_transitions(Clone)", "Transitions", PatchFsm_EngineTransitionsControl),
         }),
         new PatchedFsm("GG_Engine_Prime", new FsmPatch[]
         {
             new FsmPatch("right1", "Custom Fade", PatchFsm_CustomFadeControl),
-            new FsmPatch("Dream Entry", "Control", PatchFsm_DreamEntryControl),
+            new FsmPatch("Dream Entry", "Control", PatchFsm_LoreDreamEntryControl),
             new FsmPatch("gg_battle_transitions(Clone)", "Transitions", PatchFsm_EngineTransitionsControl),
         }),
         new PatchedFsm("GG_Engine_Root", new FsmPatch[]
         {
             new FsmPatch("right1", "Custom Fade", PatchFsm_CustomFadeControl),
-            new FsmPatch("Dream Entry", "Control", PatchFsm_DreamEntryControl),
+            new FsmPatch("Dream Entry", "Control", PatchFsm_LoreDreamEntryControl),
             new FsmPatch("gg_battle_transitions(Clone)", "Transitions", PatchFsm_EngineTransitionsControl),
         }),
         new PatchedFsm("GG_Wyrm", new FsmPatch[]
         {
             new FsmPatch("right1", "Custom Fade", PatchFsm_CustomFadeControl),
-            new FsmPatch("Dream Entry", "Control", PatchFsm_DreamEntryControl),
+            new FsmPatch("Dream Entry", "Control", PatchFsm_LoreDreamEntryControl),
             new FsmPatch("gg_battle_transitions(Clone)", "Transitions", PatchFsm_EngineTransitionsControl),
         }),
         new PatchedFsm("DontDestroyOnLoad", new FsmPatch[]
@@ -157,8 +167,8 @@ public class PatchedFsm
         }),
         new PatchedFsm("GG_Workshop", new FsmPatch[]
         {
-            new FsmPatch("door_dreamReturnGG", "Return from boss", PatchFsm_WorkshopDreamReturnControl, isSingleFsm: false),
-            new FsmPatch("Inspect", "GG Boss UI", PatchFsm_StatueInspectControl, isSingleFsm: false),
+            new FsmPatch("door_dreamReturnGG", "Return from boss", PatchFsm_WorkshopDreamReturnControl),
+            new FsmPatch("Inspect", "GG Boss UI", PatchFsm_StatueInspectControl),
             new FsmPatch("Inspect", "npc_control", PatchFsm_NPCControl),
         }),
         new PatchedFsm("GG_Gruz_Mother", new FsmPatch[]
@@ -174,6 +184,7 @@ public class PatchedFsm
         new PatchedFsm("GG_Vengefly", new FsmPatch[]
         {
             new FsmPatch("Dream Entry", "Control", PatchFsm_VengeflyKingDreamEntryControl),
+            new FsmPatch("Giant Buzzer Col", "Big Buzzer", PatchFsm_VengeflyKingControl),
             new FsmPatch("Corpse Giant Buzzer Col(Clone)", "corpse", PatchFsm_VengeflyKingCorpseControl),
         }),
         new PatchedFsm("GG_Vengefly_V", new FsmPatch[]
@@ -244,6 +255,7 @@ public class PatchedFsm
         {
             new FsmPatch("Hive Knight", "Control", PatchFsm_HiveKnightControl),
             new FsmPatch("Corpse Hive Knight(Clone)", "corpse", PatchFsm_HiveKnightCorpseControl),
+            new FsmPatch("Dream Entry", "Control", PatchFsm_RegularDreamEntryControl),
         }),
         new PatchedFsm("GG_Broken_Vessel", new FsmPatch[]
         {
@@ -291,7 +303,9 @@ public class PatchedFsm
          }),
          new PatchedFsm("GG_Crystal_Guardian_2", new FsmPatch[]
          {
+             new FsmPatch("Zombie Beam Miner Rematch", "Beam Miner", PatchFsm_CrystalGuardian2Control),
              new FsmPatch("Corpse Mega Zombie Beam Miner(Clone)", "corpse", PatchFsm_CrystalGuardian2CorpseControl),
+             new FsmPatch("Dream Entry", "Control", PatchFsm_RegularDreamEntryControl),
          }),
          new PatchedFsm("GG_Uumuu", new FsmPatch[]
          {
@@ -369,7 +383,9 @@ public class PatchedFsm
         }),
         new PatchedFsm("GG_Ghost_Xero", new FsmPatch[]
         {
+            new FsmPatch("Warrior", "FSM", PatchFsm_XeroControl),
             new FsmPatch("Ghost Death Xero(Clone)", "Control", PatchFsm_XeroCorpseControl),
+            new FsmPatch("Dream Entry", "Control", PatchFsm_RegularDreamEntryControl),
         }),
         new PatchedFsm("GG_Ghost_Xero_V", new FsmPatch[]
         {
@@ -467,13 +483,20 @@ public class PatchedFsm
     public static bool PatchFsm_TransitionsControl(Fsm fsm)
     {
 		var Out = fsm.GetState("Out");
+		var OutStatue = fsm.GetState("Out Statue");
 		var In = fsm.GetState("In");
+		var InWorkshop = fsm.GetState("In Workshop");
 
 		var origOutWait = ((Wait)Out.Actions[6]).time.Value;
 
 		if(!PantheonQoL.skipTransitionAnimation) return true;
 
-		((Wait)Out.Actions[6]).time = 0.2f;
+
+		var transitionSpeed = 0.2f;
+
+		((Wait)Out.Actions[6]).time = transitionSpeed;
+		((Wait)OutStatue.Actions[7]).time = transitionSpeed;
+		((Wait)InWorkshop.Actions[4]).time = transitionSpeed;
 
 		var battleEnd = fsm.GameObject.transform.Find("battle_end");
 		if(battleEnd != null){
@@ -500,6 +523,31 @@ public class PatchedFsm
 			if(vignette_large != null) vignette_large.gameObject.SetActive(false);
 			if(white_solid != null) white_solid.gameObject.SetActive(false);
 		}
+
+        return true;
+    }
+
+    public static bool PatchFsm_RegularDoorAnimControl(Fsm fsm)
+    {
+		var openUI= fsm.GetState("Open UI");
+		var wait = fsm.GetState("Wait");
+		var doorAnim = fsm.GetState("Door Anim");
+		var dreamBoxDown = fsm.GetState("Dream Box Down");
+		var changeScene = fsm.GetState("Change Scene");
+		var impact = fsm.GetState("Impact");
+		
+		((Wait)wait.Actions[0]).time = 0f;
+		((Wait)doorAnim.Actions[3]).time = 0f;
+		((Wait)dreamBoxDown.Actions[3]).time = 0f;
+//		((SetFsmFloat)dreamBoxDown.Actions[5]).setValue = 0f;
+
+		var hudIn = new CustomLogicFsm(fsm);
+		hudIn.action += (fsm) =>
+		{
+			GameCameras.instance.hudCanvas.LocateMyFSM("Slide Out").SendEvent("IN");
+		};
+
+		doorAnim.Actions = InsertInArray(doorAnim.Actions, hudIn, 0);
 
         return true;
     }
@@ -617,6 +665,54 @@ public class PatchedFsm
         return true;
     }
 
+    public static bool PatchFsm_DoorDreamReturnControl(Fsm fsm)
+    {
+		var pause = fsm.GetState("Pause");
+		var doorEntry = fsm.GetState("Door Entry");
+		var doorOpen = fsm.GetState("Door Open");
+		var takeControl = fsm.GetState("Take Control");
+		var knightExit = fsm.GetState("Knight Exit");
+		var knightReturnToIdle = fsm.GetState("Knight Return to Idle");
+		var waitForDreamReturn = fsm.GetState("Wait for dream return");
+		var wait = fsm.GetState("Wait");
+		var dreamReturn = fsm.GetState("Dream Return");
+		var doorClose = fsm.GetState("Door Close");
+		var returnControl = fsm.GetState("Return Control");
+		var fadeIn = fsm.GetState("Fade In");
+		var save = fsm.GetState("Save");
+
+		var resetHero = new CustomLogicFsm(fsm);
+		resetHero.action += (fsm) => {
+			var resetMotion = HeroController.instance.GetType().GetMethod("ResetMotion", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+			resetMotion.Invoke(HeroController.instance, new object[]{});
+			HeroController.instance.ResetState();
+		};
+
+		var transitionPoint = fsm.GameObject.GetComponent<TransitionPoint>();
+		transitionPoint.dontWalkOutOfDoor = true;
+
+//		((ActivateGameObject)pause.Actions[0]).activate = true;
+		waitForDreamReturn.Actions[0].Enabled = false;
+		knightExit.Actions[0].Enabled = false;
+		knightReturnToIdle.Actions[1].Enabled = false;
+		wait.Actions[0].Enabled = false;
+		doorOpen.Actions[0].Enabled = false;
+
+		var sendEvent = new CustomLogicFsm(fsm);
+		sendEvent.action += (fsm) => fsm.FsmComponent.SendEvent("FINISHED");
+
+		var enableMeshRenderer = new CustomLogicFsm(fsm);
+		enableMeshRenderer.action += (fsm) => HeroController.instance.gameObject.GetComponent<MeshRenderer>().enabled = true;
+
+		SetTransitionToState(doorEntry, doorOpen, 2);
+
+		doorClose.Actions = InsertInArray(doorClose.Actions, sendEvent, doorClose.Actions.Length);
+		knightReturnToIdle.Actions = InsertInArray(knightReturnToIdle.Actions, enableMeshRenderer, knightReturnToIdle.Actions.Length);
+//		takeControl.Actions = InsertInArray(takeControl.Actions, resetHero, 0);
+
+        return true;
+    }
+
     public static bool PatchFsm_KnightDreamReturnControl(Fsm fsm)
     {
 		var isLong = fsm.GetState("Long?");
@@ -671,16 +767,39 @@ public class PatchedFsm
 			fsm.FsmComponent.SendEvent("DREAM WAKE");
 		};
 
+		var returnControl = new CustomLogicFsm(fsm);
+		returnControl.action += (fsm) => {
+			HeroController.instance.RegainControl();
+			HeroController.instance.StartAnimationControl();
+			var resetMotion = HeroController.instance.GetType().GetMethod("ResetMotion", BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance);
+			resetMotion.Invoke(HeroController.instance, new object[]{});
+			HeroController.instance.ResetState();
+		};
+		var speedUpBattleEnter = new CustomLogicFsm(fsm);
+		speedUpBattleEnter.action += (fsm) => {
+			GameObject transitions = fsm.GetFsmGameObject("Transitions").Value;
+			var battle_enter = transitions.transform.Find("battle_enter");
+
+			var paleGlower = battle_enter.Find("pale_glower (2)");
+			var vignette_large = battle_enter.Find("vignette_large_v01 (1)");
+			var white_solid = battle_enter.Find("white_solid (1)");
+			if(paleGlower != null) paleGlower.gameObject.SetActive(false);
+			if(vignette_large != null) vignette_large.gameObject.SetActive(false);
+			if(white_solid != null) white_solid.gameObject.SetActive(false);
+		};
+
 		wait.Actions[3].Enabled = false;
 //		transitionIn.Actions[0].Enabled = false;
-		transitionWait.Actions[0].Enabled = false;
+//		transitionWait.Actions[0].Enabled = false;
 		transitionWait.Actions[1].Enabled = false;
-		transitionWait.Actions[2].Enabled = false;
+//		transitionWait.Actions[2].Enabled = false;
 		transitionWait.Actions[3].Enabled = false;
 //		transitionIn.Transitions[0].FsmEvent = new FsmEvent("FINISHED");
 		getUpWait.Actions[0].Enabled = false;
 
 		transitionIn.Actions = InsertInArray(transitionIn.Actions, finishState, 1);
+		transitionWait.Actions = InsertInArray(transitionWait.Actions, speedUpBattleEnter, 1);
+		gottenUp.Actions = InsertInArray(gottenUp.Actions, returnControl, 0);
 
         return true;
     }
@@ -833,7 +952,7 @@ public class PatchedFsm
 
         return true;
     }
-    public static bool PatchFsm_DreamEntryControl(Fsm fsm)
+    public static bool PatchFsm_LoreDreamEntryControl(Fsm fsm)
     {
 		var doorEntry = fsm.GetState("Door Entry");
 		var takeControl = fsm.GetState("Take Control");
@@ -862,32 +981,37 @@ public class PatchedFsm
 
         return true;
     }
-    public static bool PatchFsm_VengeflyKingDreamEntryControl(Fsm fsm)
+    public static bool PatchFsm_RegularDreamEntryControl(Fsm fsm)
     {
+		var doorEntry = fsm.GetState("Door Entry");
 		var takeControl = fsm.GetState("Take Control");
+        var startKneeling = fsm.GetState("Start Kneeling");
+        var pauseKneeling = fsm.GetState("Pause Kneeling");
+        var waitForTransition = fsm.GetState("Wait for Transition");
 		var hidePlayer = fsm.GetState("Hide Player");
         var startFade = fsm.GetState("Start Fade");
+        var returnControl = fsm.GetState("Return Control");
 
-		if(PantheonQoL.doubleVengeflyKingsFastEntrance)
-			((Wait)startFade.Actions[2]).Enabled = false;
+		var coroutineObj = new GameObject("CoroutineHandler");
+		var coroutineHandler = coroutineObj.AddComponent<CoroutineHandler>();
 
-		var coroutineHandlerObj = new GameObject("CoroutineHandler1");
-		var coroutineHandler = coroutineHandlerObj.AddComponent<CoroutineHandler>();
+		bool doRelinquish = true;
 
-		var takeControlUntil = new CustomLogicFsm(fsm);
-		takeControlUntil.action = (fsm) => {
+		var relinquishControl = new CustomLogicFsm(fsm);
+		relinquishControl.action += (fsm) => {
 			var resetInput = typeof(HeroController).GetMethod("ResetInput", BindingFlags.Instance | BindingFlags.NonPublic);
 			var resetMotion = typeof(HeroController).GetMethod("ResetMotion", BindingFlags.Instance | BindingFlags.NonPublic);
 			var resetLook = typeof(HeroController).GetMethod("ResetLook", BindingFlags.Instance | BindingFlags.NonPublic);
 			var resetAttacks = typeof(HeroController).GetMethod("ResetAttacks", BindingFlags.Instance | BindingFlags.NonPublic);
 			IEnumerator enumerator(){
-				while(fsm.ActiveStateName != "Return Control"){
+				while(doRelinquish){
 					resetInput.Invoke(HeroController.instance, new object[]{});
 					resetMotion.Invoke(HeroController.instance, new object[]{});
 					resetLook.Invoke(HeroController.instance, new object[]{});
 					resetAttacks.Invoke(HeroController.instance, new object[]{});
 					HeroController.instance.touchingWallL = false;
 					HeroController.instance.touchingWallR = false;
+					HeroController.instance.hero_state = ActorStates.no_input;
 					HeroController.instance.StopAnimationControl();
 					yield return null;
 				}
@@ -897,7 +1021,60 @@ public class PatchedFsm
 			coroutineHandler.StartCoroutine(enumerator());
 		};
 
-		takeControl.Actions = InsertInArray(takeControl.Actions, takeControlUntil, 0);
+		var stopRelinquish = new CustomLogicFsm(fsm);
+		stopRelinquish.action += (fsm) => {
+			doRelinquish = false;
+		};
+
+		takeControl.Actions = InsertInArray(takeControl.Actions, relinquishControl, 0);
+		returnControl.Actions = InsertInArray(returnControl.Actions, stopRelinquish, 0);
+
+        return true;
+    }
+    public static bool PatchFsm_VengeflyKingDreamEntryControl(Fsm fsm)
+    {
+		var takeControl = fsm.GetState("Take Control");
+		var hidePlayer = fsm.GetState("Hide Player");
+        var startFade = fsm.GetState("Start Fade");
+        var returnControl = fsm.GetState("Return Control");
+
+		((Wait)startFade.Actions[2]).Enabled = false;
+
+		var coroutineHandlerObj = new GameObject("CoroutineHandler1");
+		var coroutineHandler = coroutineHandlerObj.AddComponent<CoroutineHandler>();
+
+		bool doRelinquish = true;
+
+		var relinquishControl = new CustomLogicFsm(fsm);
+		relinquishControl.action += (fsm) => {
+			var resetInput = typeof(HeroController).GetMethod("ResetInput", BindingFlags.Instance | BindingFlags.NonPublic);
+			var resetMotion = typeof(HeroController).GetMethod("ResetMotion", BindingFlags.Instance | BindingFlags.NonPublic);
+			var resetLook = typeof(HeroController).GetMethod("ResetLook", BindingFlags.Instance | BindingFlags.NonPublic);
+			var resetAttacks = typeof(HeroController).GetMethod("ResetAttacks", BindingFlags.Instance | BindingFlags.NonPublic);
+			IEnumerator enumerator(){
+				while(doRelinquish){
+					resetInput.Invoke(HeroController.instance, new object[]{});
+					resetMotion.Invoke(HeroController.instance, new object[]{});
+					resetLook.Invoke(HeroController.instance, new object[]{});
+					resetAttacks.Invoke(HeroController.instance, new object[]{});
+					HeroController.instance.touchingWallL = false;
+					HeroController.instance.touchingWallR = false;
+					HeroController.instance.hero_state = ActorStates.no_input;
+					HeroController.instance.StopAnimationControl();
+					yield return null;
+				}
+//				HeroController.instance.RegainControl();
+//				HeroController.instance.StartAnimationControl();
+			}
+			coroutineHandler.StartCoroutine(enumerator());
+		};
+		var stopRelinquish = new CustomLogicFsm(fsm);
+		stopRelinquish.action += (fsm) => {
+			doRelinquish = false;
+		};
+
+		takeControl.Actions = InsertInArray(takeControl.Actions, relinquishControl, 0);
+		returnControl.Actions = InsertInArray(returnControl.Actions, stopRelinquish, 0);
 
         return true;
     }
@@ -909,8 +1086,8 @@ public class PatchedFsm
 
 		var arrivalAnimator = BossSceneController.Instance.transform.Find("Dream Entry/Knight Dream Arrival").gameObject.GetComponent<tk2dSpriteAnimator>();
 		var warpInClip = arrivalAnimator.GetClipByName("Warp In");
-		if(PantheonQoL.origVengeflyKingsKnightWarpInFps == -2f) PantheonQoL.origVengeflyKingsKnightWarpInFps = warpInClip.fps;
-		else warpInClip.fps = PantheonQoL.origVengeflyKingsKnightWarpInFps;
+		if(PantheonQoL.origKnightWarpInFps == -2f) PantheonQoL.origKnightWarpInFps = warpInClip.fps;
+		else warpInClip.fps = PantheonQoL.origKnightWarpInFps;
 
 		var animator = fsm.GameObject.GetComponent<tk2dSpriteAnimator>();
 		var roarClip = animator.GetClipByName("Roar");
@@ -919,12 +1096,14 @@ public class PatchedFsm
 
 		float origWarpInDuration = warpInClip.Duration;
 
-		if(PantheonQoL.doubleVengeflyKingsFastEntrance){
-			warpInClip.fps *= PantheonQoL.doubleVengeflyKingsEntranceSpeed;
+		if(BossSequenceController.IsInSequence && BossSequenceController.BossIndex < 1){
+			warpInClip.fps = PantheonQoL.origKnightWarpInFps * origWarpInDuration / (origWarpInDuration - 1.25f);
 			float skippedSeconds = origWarpInDuration - warpInClip.Duration;
 
-			((Wait)setGG.Actions[3]).time.Value -= (0.75f + skippedSeconds);
+//			((Wait)setGG.Actions[3]).time.Value -= (0.75f + skippedSeconds);
+			setGG.Actions[3].Enabled = false;
 		}
+		else ((Wait)setGG.Actions[3]).time = 1f;
 //
 //		if(skippedSeconds >= 2){
 //			((Wait)setGG.Actions[3]).Enabled = false;
@@ -2091,13 +2270,27 @@ public class PatchedFsm
         var intro = fsm.GetState("Intro");
         var introEnd = fsm.GetState("Intro End");
 
-        ((Wait)intro.Actions[3]).time = 0.25f;
+		var introWait = 0.25f;
+		var skippedSeconds = ((Wait)intro.Actions[3]).time.Value - introWait; //intro wait should be 2 seconds
+		((Wait)intro.Actions[3]).time = introWait;
 
         var customActionDisableRoarEmitter = new CustomLogicFsm(fsm);
         customActionDisableRoarEmitter.action += (Fsm fsm) =>
         {
             fsm.GetFsmGameObject("Roar Emitter").Value.SetActive(false);
         };
+
+		var arrivalAnimator = BossSceneController.Instance.transform.Find("Dream Entry/Knight Dream Arrival").gameObject.GetComponent<tk2dSpriteAnimator>();
+		var warpInClip = arrivalAnimator.GetClipByName("Warp In");
+		if(PantheonQoL.origKnightWarpInFps == -2f) PantheonQoL.origKnightWarpInFps = warpInClip.fps;
+		else warpInClip.fps = PantheonQoL.origKnightWarpInFps;
+
+		float origWarpInDuration = warpInClip.Duration;
+
+		if(BossSequenceController.IsInSequence && BossSequenceController.BossIndex < 1){
+			warpInClip.fps = PantheonQoL.origKnightWarpInFps * origWarpInDuration / (origWarpInDuration - skippedSeconds);
+
+		}
 
         introEnd.Actions = InsertInArray(introEnd.Actions, customActionDisableRoarEmitter, 0);
 
@@ -2985,6 +3178,31 @@ public class PatchedFsm
 		inAir.Actions = InsertInArray(inAir.Actions, sendEvent, inAir.Actions.Length);
 		deathLand.Actions = InsertInArray(deathLand.Actions, sendEvent, deathLand.Actions.Length);
 		escapeAntic.Actions = InsertInArray(escapeAntic.Actions, sendEvent, escapeAntic.Actions.Length);
+
+        return true;
+    }
+
+    public static bool PatchFsm_CrystalGuardian2Control(Fsm fsm)
+    {
+        var GGWait = fsm.GetState("GG Wait");
+        var wake = fsm.GetState("Wake");
+
+		var waitSum = ((Wait)GGWait.Actions[1]).time.Value + ((Wait)wake.Actions[4]).time.Value; //should be 2 seconds
+
+		((Wait)wake.Actions[4]).time = 0f;
+
+		var arrivalAnimator = BossSceneController.Instance.transform.Find("Dream Entry/Knight Dream Arrival").gameObject.GetComponent<tk2dSpriteAnimator>();
+		var warpInClip = arrivalAnimator.GetClipByName("Warp In");
+		if(PantheonQoL.origKnightWarpInFps == -2f) PantheonQoL.origKnightWarpInFps = warpInClip.fps;
+		else warpInClip.fps = PantheonQoL.origKnightWarpInFps;
+
+		float origWarpInDuration = warpInClip.Duration;
+
+		if(BossSequenceController.IsInSequence && BossSequenceController.BossIndex < 1){
+			((Wait)GGWait.Actions[1]).Enabled = false;
+			warpInClip.fps = PantheonQoL.origKnightWarpInFps * origWarpInDuration / (origWarpInDuration - waitSum);
+
+		}
 
         return true;
     }
@@ -4184,6 +4402,26 @@ public class PatchedFsm
 
         return true;
     }
+    public static bool PatchFsm_XeroControl(Fsm fsm)
+    {
+        var wait = fsm.GetState("Wait");
+
+		if(BossSequenceController.IsInSequence && BossSequenceController.BossIndex < 1){
+			var waitTime = ((Wait)wait.Actions[0]).time.Value;
+
+			var arrivalAnimator = BossSceneController.Instance.transform.Find("Dream Entry/Knight Dream Arrival").gameObject.GetComponent<tk2dSpriteAnimator>();
+			var warpInClip = arrivalAnimator.GetClipByName("Warp In");
+			if(PantheonQoL.origKnightWarpInFps == -2f) PantheonQoL.origKnightWarpInFps = warpInClip.fps;
+			else warpInClip.fps = PantheonQoL.origKnightWarpInFps;
+
+			var origDuration = warpInClip.Duration;
+
+			warpInClip.fps = PantheonQoL.origKnightWarpInFps * origDuration / (origDuration - waitTime);
+			((Wait)wait.Actions[0]).time = 0f;
+		}
+
+        return true;
+    }
     public static bool PatchFsm_MarkothCorpseControl(Fsm fsm)
     {
         var music = fsm.GetState("Music");
@@ -4795,6 +5033,9 @@ public class PatchedFsm
 		float origBossDeadWait = BossSceneController.Instance.bossesDeadWaitTime;
 		BossSceneController.Instance.bossesDeadWaitTime = 0f;
 
+//		((AudioPlayerOneShotSingle)rumbleStart.Actions[2]).Enabled = false;
+		((AudioPlayerOneShotSingle)rumbleStart.Actions[5]).Enabled = false;
+
 		var dontDestroyScene = PantheonQoL.instance.gameObject.scene;
 		var mainScene = fsm.FsmComponent.gameObject.scene;
 
@@ -5196,15 +5437,36 @@ public class PatchedFsm
 		var setup = fsm.GetState("Setup");
 		var titleUp = fsm.GetState("Title Up");
 		var flashDown = fsm.GetState("Flash Down");
+		var battleStart = fsm.GetState("Battle Start");
+
+		var coroutineHandlerObj = new GameObject("CoroutineHandler1");
+		var coroutineHandler = coroutineHandlerObj.AddComponent<CoroutineHandler>();
 
 		setup.Actions[6].Enabled = false;
+//		titleUp.Actions[5].Enabled = false;
+//		titleUp.Actions[6].Enabled = false;
+//		titleUp.Actions[7].Enabled = false;
+
+		var applyMusic = new CustomLogicFsm(fsm);
+		applyMusic.action += (fsm) => {
+			IEnumerator enumerator(){
+				yield return new WaitForSeconds(0.5f);
+				titleUp.Actions[0].OnEnter();
+				titleUp.Actions[0].Finished = false;
+				titleUp.Actions[2].OnEnter();
+				titleUp.Actions[2].Finished = false;
+				titleUp.Actions[3].OnEnter();
+				titleUp.Actions[3].Finished = false;
+			}
+			coroutineHandler.StartCoroutine(enumerator());
+		};
 
 		fsm.GetFsmGameObject("Feather Particles").Value.SetActive(false);
 		fsm.GetFsmGameObject("Sun").Value.SetActive(false);
 
 		SetTransitionToState(setup, flashDown, 0);
 
-//		flashDown.Actions = InsertInArray(flashDown.Actions, titleUp.Actions[3], 0);
+		battleStart.Actions = InsertInArray(battleStart.Actions, applyMusic, battleStart.Actions.Length);
 //		flashDown.Actions = InsertInArray(flashDown.Actions, titleUp.Actions[2], 0);
 //		flashDown.Actions = InsertInArray(flashDown.Actions, titleUp.Actions[0], 0);
 

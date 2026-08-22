@@ -12,7 +12,7 @@ using HutongGames.PlayMaker;
 
 namespace PantheonQoL
 {
-    [BepInPlugin("bepinex.plugin.test", "PantheonQoL", "0.1.0.0")]
+    [BepInPlugin("bepinex.plugin.test", "PantheonQoL", "0.1.1.0")]
     public partial class PantheonQoL : BaseUnityPlugin
     {
 		public class BindingsData{
@@ -27,10 +27,8 @@ namespace PantheonQoL
 		public static bool skipTransitionAnimation = true;
 		public static bool disFastDeathForAll = false; //disable for all
 		public static bool disFastDeathForPermaThreat = true; //disable only for bosses with permanent threats on arena (like no floor)
-		public static bool doubleVengeflyKingsFastEntrance = true;
-		public static float doubleVengeflyKingsEntranceSpeed = 1.75f;
 		public static float origVengeflyKingsRoarFps = -2f;
-		public static float origVengeflyKingsKnightWarpInFps = -2f;
+		public static float origKnightWarpInFps = -2f;
 		public static bool isRadiantRun = false;
 		public static bool doSkipLoreScenes = false;
 		public static bool doSkipSpaScenes = false;
@@ -111,7 +109,7 @@ namespace PantheonQoL
 
         void Update()
         {
-			if(Keyboard.current.leftBracketKey.wasPressedThisFrame){
+			if(Keyboard.current.leftBracketKey.wasPressedThisFrame && !HeroController.instance.cState.hazardDeath){
 				GameManager.UnsafeInstance.BeginSceneTransition(new GameManager.SceneLoadInfo
 				{
 					SceneName = PlayerData.instance.dreamReturnScene,

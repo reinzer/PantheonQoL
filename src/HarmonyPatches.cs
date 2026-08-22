@@ -182,7 +182,7 @@ namespace PantheonQoL
             foreach(var item in patchedFsm.fsms)
             {
 				if(!item.isSingleFsm && objName.Contains(item.objName) && fsmNameHash == item.fsmNameHash){
-                    Log.LogInfo(__instance.FsmName + "YAAAAAAAAAAAAAAAAAY");
+                    Log.LogInfo(__instance.FsmName + "YAAAAAAAAAAAAAAAAAY" + objName);
                     item.method(__instance.Fsm);
 				}
             }
@@ -190,21 +190,21 @@ namespace PantheonQoL
             {
                 if(objNameHash == item.objNameHash && fsmNameHash == item.fsmNameHash)
                 {
-                    Log.LogInfo(__instance.FsmName + "YAAAAAAAAAAAAAAAAAY");
+                    Log.LogInfo(__instance.FsmName + "YAAAAAAAAAAAAAAAAAYOYO" + objName);
                     item.method(__instance.Fsm);
                     return;
                 }
 			}
 
-            foreach(var item in patchedFsm.fsms)
-            {
-                if(objNameHash == item.objNameHash && fsmNameHash == item.fsmNameHash)
-                {
-                    Log.LogInfo(__instance.FsmName + "YAAAAAAAAAAAAAAAAAY");
-                    item.method(__instance.Fsm);
-                    return;
-                }
-			}
+//            foreach(var item in patchedFsm.fsms)
+//            {
+//                if(objNameHash == item.objNameHash && fsmNameHash == item.fsmNameHash)
+//                {
+//                    Log.LogInfo(__instance.FsmName + "YAAAAAAAAAAAAAAAAAY");
+//                    item.method(__instance.Fsm);
+//                    return;
+//                }
+//			}
         }
 
         [HarmonyPostfix]
@@ -275,6 +275,11 @@ namespace PantheonQoL
 	//			__instance.bossesDeadWaitTime = 0f;
 			}
 
+			var arrivalAnimator = BossSceneController.Instance.transform.Find("Dream Entry/Knight Dream Arrival").gameObject.GetComponent<tk2dSpriteAnimator>();
+			var warpInClip = arrivalAnimator.GetClipByName("Warp In");
+			if(PantheonQoL.origKnightWarpInFps == -2f) PantheonQoL.origKnightWarpInFps = warpInClip.fps;
+			else warpInClip.fps = PantheonQoL.origKnightWarpInFps;
+
 //			while(__result.MoveNext()) yield return __result.Current;
         }
 
@@ -337,18 +342,18 @@ namespace PantheonQoL
 			return true;
         }
 
-//        [HarmonyPostfix]
-//        [HarmonyPatch(typeof(HeroController), "RegainControl")]
-//        private static void HeroController_RegainControl_Postfix(HeroController __instance)
-//        {
-//			PantheonQoL.Log.LogInfo("------------------------------------Regain Control---------------------------------");
-//			var stackTrace = new StackTrace();
-//			foreach(var frame in stackTrace.GetFrames()){
-//				var method = frame.GetMethod();
-//				PantheonQoL.Log.LogInfo(method.DeclaringType?.FullName);
-//			}
-//			PantheonQoL.Log.LogInfo("||||||||||||||||||||||||||||||||||||||||Regain Control||||||||||||||||||||||||||||||||||||||||||||||");
-//        }
+        [HarmonyPostfix]
+        [HarmonyPatch(typeof(HeroController), "RegainControl")]
+        private static void HeroController_RegainControl_Postfix(HeroController __instance)
+        {
+			PantheonQoL.Log.LogInfo("------------------------------------Regain Control---------------------------------");
+			var stackTrace = new StackTrace();
+			foreach(var frame in stackTrace.GetFrames()){
+				var method = frame.GetMethod();
+				PantheonQoL.Log.LogInfo(method.DeclaringType?.FullName);
+			}
+			PantheonQoL.Log.LogInfo("||||||||||||||||||||||||||||||||||||||||Regain Control||||||||||||||||||||||||||||||||||||||||||||||");
+        }
         [HarmonyPrefix]
         [HarmonyPatch(typeof(SceneLoad), "Begin")]
         private static bool Prefix(SceneLoad __instance)
